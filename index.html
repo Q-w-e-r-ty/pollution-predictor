@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Air Pollution Indicator</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Montserrat:wght@700&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="root">
+    <h1 class="heading">Air Pollution Indicator</h1>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+      <input type="file" name="imageInput" id="imageInput" hidden>
+		<div class="img-container">
+			<h3>Upload Image</h3>
+			<div class="drag-area">
+				<div class="icon">
+					<i class="fas fa-images"></i>
+				</div>
+				<span class="header">Drag & Drop</span>
+				<span class="header"> or <span class="button">Select Image</span> </span>
+			</div>
+      <div id="upload-message"></div>
+    </div> 
+    <input class="button" type="submit" value="Upload Image">
+    <div class="location-container">  
+    </div>
+    <div class="air-info">
+      <div class="edit">
+              <div class="location-container">
+                <label for="location">Choose City:</label>
+                <select id="location" name="location">
+                        <option value="choose">choose</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Chennai">VIT Chennai</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Bangalore">Bangalore</option>
+                      </select>
+                      <button type="button" onclick="(submitLocation())">Submit</button>
+                      <button type="button" onclick="showPreviousResults()">Show Previous Results</button>
+                    </div>  
+                </div>
+              </form>     
+        <div id="air-quality-status"></div>
+        <div class="component-container">
+          <table class="aqi-table">
+            <tr> <th class="nb">Actual Values from API</th> </tr>
+            <tr>
+              <th>Component</th>
+              <th>Value</th>
+            </tr>
+            <tr>
+              <td class="component-names">Carbon Monoxide:</td>
+              <td class="component-val" data-comp="co"></td>
+            </tr>
+            <tr>
+              <td class="component-names">Nitrogen Dioxide :</td>
+              <td class="component-val" data-comp="no2"></td>
+            </tr>
+            <tr>
+              <td class="component-names">Ozone :</td>
+              <td class="component-val" data-comp="o3"></td>
+            </tr>
+            <tr>
+              <td class="component-names">Sulphur Dioxide :</td>
+              <td class="component-val" data-comp="so2"></td>
+            </tr>
+            <tr>
+              <td class="component-names">Fine particles matter :</td>
+              <td class="component-val" data-comp="pm2_5"></td>
+            </tr>
+            <tr>
+              <td class="component-names">Coarse particulate matter :</td>
+              <td class="component-val" data-comp="pm10"></td>
+            </tr> 
+          </table>
+            <table class="prediction-table">
+              <tr> <th>Predicted Values</th> </tr>
+              <tr>
+                <th>Component</th>
+                <th>Value</th>
+              </tr>
+            <tr>
+              <td class="component-names">Carbon Monoxide:</td>
+              <td class="component-val1" data-comp="co"></td>
+            </tr>
+            <tr>
+              <td class="component-names">Nitrogen Dioxide :</td>
+              <td class="component-val1" data-comp="no2"></td>
+            </tr>
+            <tr>
+              <td class="component-names">Ozone :</td>
+              <td class="component-val1" data-comp="o3"></td>
+            </tr>
+            <tr>
+              <td class="component-names">Sulphur Dioxide :</td>
+              <td class="component-val1" data-comp="so2"></td>
+            </tr>
+            <tr>
+              <td class="component-names">Fine particles matter :</td>
+              <td class="component-val1" data-comp="pm2_5"></td>
+            </tr>
+            <tr>
+              <td class="component-names">Coarse particulate matter :</td>
+              <td class="component-val1" data-comp="pm10"></td>
+            </tr> 
+          </table>
+        </div>	
+      </div>
+	  </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+	  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+	  sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+	  monospace;
+  }
+  * {
+	  margin: 0;
+	  padding: 0;
+	  box-sizing: border-box;
+  }
+  
+  .root {
+  background-image:
+	  -webkit-linear-gradient(#C6E4EE 0%, #C6E4EE 40%, #FED1AE 60%, #FAA0B9 70%, #CB7DCB 80%, #757ECB 100%);
+  background-image:
+	  -moz-linear-gradient(#C6E4EE 0%, #C6E4EE 40%, #FED1AE 60%, #FAA0B9 70%, #CB7DCB 80%, #757ECB 100%);
+  background-image:
+	  -o-linear-gradient(#C6E4EE 0%, #C6E4EE 40%, #FED1AE 60%, #FAA0B9 70%, #CB7DCB 80%, #757ECB 100%);
+  background-image:
+	  linear-gradient(#C6E4EE 0%, #C6E4EE 40%, #FED1AE 60%, #FAA0B9 70%, #CB7DCB 80%, #757ECB 100%);
+  padding: 2vw;
+  width: 100%;
+  height: 100%;
+  color: rgb(22, 89, 213);
+  font-family: poppins;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  }
+
+  .sub{
+	padding: 8px 16px;
+  border: none;
+  background-color: #269fe6;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px; /* Add margin-right for spacing */
+  margin-top: 10px;
+}
+  .heading {
+	  text-align: center;
+	  font-family: 'Fira Code', monospace;
+	  font-size: 3rem;
+	  margin-bottom: 60px;
+  }
+  
+  .sub-heading {
+	  margin: 20px 0;
+	  font-family: 'Montserrat', sans-serif;
+	  font-size: 2rem;
+  }
+  .location-container {
+	  margin: 20px 0;
+	width: 100%;
+	max-width: 600px;
+  }
+  
+  .img-container{
+	  max-width: 600px;
+	  width: 100%;
+	  max-height: 600px;
+	  padding: 30px;
+	  border-radius: 20px;
+	  box-shadow: rgba(128, 178, 227, 0.2) 0px 8px 24px;
+  }
+  .drag-area{
+	  height: 200px;
+	  border: 3px dashed ;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  flex-direction: column;
+	  margin: 10px auto;
+  }
+
+  .drag-area img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain; /* This property ensures that the image maintains its aspect ratio */
+  }
+  
+  .drag-area.header{
+	  font-size: 20px;
+	  font-weight: 500;
+	  color: #269fe6;
+  }
+  .drag-area.support{
+	  font-size: 12px;
+	  color: gray;
+	  margin: 10px 0 15px 0;
+  }
+  .drag-area.button{
+	  font-size: 20px;
+	  font-weight: 500;
+	  color: #4ebba0;
+	  cursor: pointer;
+  }
+  
+  .drag-area.active{
+	  border: 2px solid #2c6caf;
+  }
+  .drag-area img{
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover;
+  }
+  
+  .location-container {
+	  display: flex;
+	  align-items: center;
+	}
+	
+	.location-container label {
+	  margin-right: 10px;
+	}
+	
+	.location-container select {
+	  padding: 8px;
+	  border-radius: 5px;
+	  margin-right: 10px;
+	}
+	
+	.location-container button {
+	  padding: 8px 16px;
+	  border: none;
+	  background-color: #269fe6;
+	  color: white;
+	  border-radius: 5px;
+	  cursor: pointer;
+	}
+	
+	.location-container button:hover {
+	  background-color: #1a7da3;
+	}
+  
+	input[type=submit] {
+	  background-color: #269fe6;
+	  color: #fff;
+	  border: none;
+	  border-radius: 20px;
+	  padding: 10px 20px;
+	  cursor: pointer;
+	  transition: background-color 0.3s ease;
+	}
+	
+	input[type=submit]:hover {
+	  background-color: #1a7da3;
+	}
+	
+	.location-container button {
+	  padding: 8px 16px;
+	  border: none;
+	  background-color: #269fe6;
+	  color: white;
+	  border-radius: 5px;
+	  cursor: pointer;
+	  margin-right: 10px; /* Add margin-right for spacing */
+	  margin-top: 10px; /* Add margin-top to push buttons to the next line */
+	}
+	
+	/* Log Values Button */
+	.log-btn {
+	  padding: 10px 20px;
+	  background-color: #4ebba0;
+	  color: #fff;
+	  border: none;
+	  border-radius: 20px;
+	  cursor: pointer;
+	  transition: background-color 0.3s ease;
+	  margin-right: 10px; /* Add margin-right for spacing */
+	  margin-top: 10px; /* Add margin-top to push buttons to the next line */
+	}
+	
+	/* Search Button */
+	.search-btn {
+	  padding: 10px 14px;
+	  background-color: #269fe6;
+	  border: none;
+	  font-family: 'Poppins', sans-serif;
+	  font-weight: 700;
+	  font-size: 1rem;
+	  border-radius: 4px;
+	  color: #fff;
+	  margin: 10px;
+	  cursor: pointer;
+	}
+  .aqi-table {
+	float:left;
+	width: 48%;
+	border-collapse: collapse;
+	margin-top: 20px;
+	margin-right: 2%;
+  }
+  
+  .aqi-table th, .aqi-table td {
+	border: 1px solid #67156f;
+	padding: 10px;
+	text-align: left;
+  }
+  .aqi-table thead {
+	border: 1px solid #67156f;
+	padding: 10px;
+	text-align: left;
+  }
+  .prediction-table thead {
+	border: 1px solid #67156f;
+	padding: 10px;
+	text-align: left;
+  }
+  
+  .aqi-table th {
+	color: #ad23b5;
+  }
+  
+  
+  table tr:first-child th {
+	  border: none;
+	  padding: 0%;
+	  padding-bottom: 2%;
+	  color: #757ECB;
+	  font-size: 18px;
+	  text-decoration: underline;
+	}
+	
+  
+  .prediction-table {
+	float:right;
+	width: 48%;
+	border-collapse: collapse;
+	margin-top: 20px;
+	margin-left: 2%;
+  }
+  
+  .prediction-table th, .prediction-table td {
+	border: 1px solid #67156f;
+	padding: 10px;
+	text-align: left;
+  }
+  
+  .prediction-table th {
+	color: #ad23b5;
+  }
+  
+  footer {
+	  margin-top: 40px;
+	  text-align: center;
+  }
+  
